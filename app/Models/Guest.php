@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Guest extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'ip',
+        'device',
+        'host',
+        'org',
+        'os',
+        'city',
+        'country',
+        'region',
+        'timezone',
+        'location'
+    ];
 }

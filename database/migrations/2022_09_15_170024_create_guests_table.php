@@ -22,7 +22,9 @@ return new class extends Migration
             $table->string('location');
             $table->string('org');
             $table->string('timezone');
-            $table->string('readme');
+            $table->string('device');
+            $table->string('os');
+            $table->string('host');
             $table->timestamps();
         });
     }
