@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\GuestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 Route::controller(GuestController::class)->group(function(){
     Route::post('/check-user', 'getUser');
+});
+
+Route::controller(ContactController::class)->group(function(){
+    Route::post('/add-contact', 'addContact');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

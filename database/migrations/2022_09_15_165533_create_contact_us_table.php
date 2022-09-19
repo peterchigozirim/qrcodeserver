@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('email');
             $table->longText('message');
+            $table->string('device');
+            $table->string('os');
             $table->timestamps();
         });
     }
